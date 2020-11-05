@@ -23,7 +23,7 @@ public class ApacheLogMapper extends MapReduceBase implements Mapper <LongWritab
 			Date date=formatter.parse(keyword);
 			SimpleDateFormat formatter1=new SimpleDateFormat("yyyy-MM-dd 'T' HH");
 			String result = formatter1.format(date);  
-			output.collect(new Text(result+":00:00"), one);
+			output.collect(new Text(result+":00:00.000"), one);
 		} catch (ParseException e) {
 
 		}
